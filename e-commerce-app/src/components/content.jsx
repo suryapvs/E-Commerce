@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import ProductItem from './productItem';
 
 const HeaderStyle = styled.h1`
     background-color: red;
@@ -8,26 +9,16 @@ const HeaderStyle = styled.h1`
 
 const content = (props) => {
   const [count,setCount] = useState(0);
+  const [product,setProduct] = useState({name:"Samsung",price:8000})
   return (
     <>
       <HeaderStyle>{ props.body } Count is {count}</HeaderStyle>
-      <button onClick={inCrease}>Increase</button>
-      <button onClick={deCrease}>Decrease</button>
+      <button onClick={()=>{setCount(prevCount=>prevCount+1)}}>Increase</button>
+      <button onClick={()=>{setCount(prevCount=>prevCount-1)}}>Decrease</button>
+      <ProductItem product={product}/>
     </>
   )
 
-  function inCrease() {
-    console.log('Increase');
-    setCount(count+1);
-  }
-
-  function deCrease() {
-    console.log('Decrease');
-    setCount(count-1);
-  }
-
-
 }
-
 
 export default content

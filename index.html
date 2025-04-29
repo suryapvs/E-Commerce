@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .about-me {
+            background-color: #ccc;
+        }
+        .my-info-content {
+            text-align: justify;
+        }
+        .my-name {
+            overflow: hidden;
+      white-space: nowrap;
+      border-right: 2px solid orange;
+      font-family: monospace;
+      max-width: 24.2rem;
+      display: inline-block;
+      animation: blink 0.8s step-end infinite;
+        }
+        @keyframes typing {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+        span.fa-icon {
+            width: 3rem;
+            height: 3rem;
+            font-size: 20px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+        .to-contact-me,.my-contact-info {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <header class="header d-flex justify-content-between p-3">
+            <div class="logo fs-3">Surya P</div>
+            <div class="header-menu d-flex align-items-center fs-5 gap-4">
+                <span class="header-menu-item">About</span>
+                <span class="header-menu-item">Skills</span>
+                <span class="header-menu-item">Projects</span>
+                <span class="header-menu-item">Contact</span>
+                <span class="header-menu-item resume-btn btn btn-primary">Resume</span>
+            </div>
+        </header>
+        <section class="about-me d-flex p-3">
+            <div class="my-info col-7 d-flex flex-column justify-content-center align-items-center gap-2">
+                <div class="p-5 d-flex flex-column justify-content-center gap-2" data-aos="fade-right" data-aos-duration="1000">
+                  <h1><span id="my-name" class="my-name">I'm Surya Perumal.</span></h1>
+                  <h1 id="" class="my-role">Full Stack Developer</h1>
+                  <div class="my-info-content fs-5">
+                    I build elegant, high-performance web applications with modern technologies. Specializing in full-stack development for e-commerce and financial solutions.
+                  </div>
+                  <div class="my-info-btn pt-2">
+                    <button class="view-project-btn btn btn-primary">View Project</button>
+                    <button class="about-me-btn btn btn-secondary ms-1">About Me</button>
+                  </div>
+                </div>
+            </div>
+            <div class="my-image col-5 d-flex justify-content-center">
+                <img src="./MyImage.png" alt="" class="my-image-source" data-aos="fade-left" data-aos-duration="1000">
+            </div>
+        </section>
+        <section class="contact-us p-5">
+            <div class="contact-head d-flex flex-column justify-content-center align-items-center">
+                <h1>Contact</h1>
+                Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
+            </div>
+            <div class="contact-items d-flex gap-3 p-5">
+                <div class="to-contact-me col-6 d-flex justify-content-center flex-column p-4 gap-4">
+                    <div class="align-items-center to-contact-item d-flex gap-3 p-2">
+                        <span class="fa-icon d-flex justify-content-center align-items-center">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </span>
+                        <div class="to-contact-elements">
+                            <h3>Address</h3>
+                            <span>98/55 A K.C Road, Shencottai</span>
+                        </div>
+                    </div>
+                    <div class="align-items-center to-contact-item d-flex gap-3 p-2">
+                        <span class="fa-icon d-flex justify-content-center align-items-center">
+                            <i class="bi bi-telephone"></i>
+                        </span>
+                        <div class="to-contact-elements">
+                            <h3>Call Us</h3>
+                            <span>+91 6384867307</span>
+                        </div>
+                    </div>
+                    <div class="align-items-center to-contact-item d-flex gap-3 p-2">
+                        <span class="fa-icon d-flex justify-content-center align-items-center">
+                            <i class="bi bi-envelope"></i>
+                        </span>
+                        <div class="to-contact-elements">
+                            <h3>Email Us</h3>
+                            <span>suryaperumal27@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-contact-info col-6 p-4">
+                    <div class="dual-div d-flex col-12">
+                        <div class="contact-form d-flex flex-column gap-2 col-6 p-2">
+                            <label for="" class="contact-form-text">Your Name</label>
+                            <input type="text" name="your_name"/>
+                        </div>
+                        <div class="contact-form d-flex flex-column gap-2 col-6 p-2">
+                            <label for="" class="contact-form-text">Your Mail</label>
+                            <input type="text" name="your_mail"/>
+                        </div>
+                    </div>
+                    <div class="contact-form d-flex flex-column gap-2 p-2">
+                        <label for="" class="contact-form-text">Subject</label>
+                        <input type="text" name="subject"/>
+                    </div>
+                    <div class="contact-form d-flex flex-column gap-2 p-2">
+                        <label for="" class="contact-form-text">Message</label>
+                        <textarea type="text" name="message"></textarea>
+                    </div>
+                    <div class="contact-form-btns p-2">
+                        <button class="contact-form-btn">Send Message</button>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+
+        AOS.init();
+
+        const el = document.getElementById("my-name");
+        const textLength = el.textContent.length;
+
+        // Set typing animation dynamically
+        el.style.animation = `typing 3s steps(${textLength}, end) forwards, blink 0.8s step-end infinite`;
+    </script>
+</body>
+</html>
